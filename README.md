@@ -11,3 +11,12 @@ JPHACKS 準備用のスクリプトを保管するリポジトリ
 $ node prefix-loop.js [prefix: JP_] [limit: 15] [offset: 1] [zerofill: true]
 ```
 
+## [mkrepo.js](mkrepo.js)
+
+その名の通りリポジトリを生成するだけの js
+これも関数として require 可能にしておきたい
+
+```shell
+$ node mkrepo.js <repository> [organization: jphacks]
+```
+
