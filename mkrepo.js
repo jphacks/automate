@@ -49,17 +49,22 @@ function main(argv) {
   const [ _node, _script, repo, org ] = argv;
   const TOKEN = process.env.GITHUB_TOKEN;
 
+  if (repo === "-h" || repo === "--help") {
+    usage();
+    return Promise.resolve(ExitCode.Help);
+  }
+
   if (repo === undefined) {
     console.error("You must specify the name of repository to create");
     console.error("");
     usage();
-    return ExitCode.Error;
+    return Promise.resolve(ExitCode.Error);
   }
   if (TOKEN === undefined) {
     console.error("You must set `GITHUB_TOKEN` as your environment variable");
     console.error("");
     usage();
-    return ExitCode.Error;
+    return Promise.resolve(ExitCode.Error);
   }
 
   return mkrepo(TOKEN, repo, org).then(resp => {
