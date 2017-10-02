@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 readonly ORGANIZATION="jphacks"
-readonly BASEREPO_PATH="~/github.com/jphacks/sample"
+readonly BASEREPO_PATH="${HOME}/github.com/jphacks/sample"
 
 prepare() {
 	local prefix=$1
