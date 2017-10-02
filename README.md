@@ -30,3 +30,7 @@ cd とか remote の追加とか push とかはコマンドベースで書いた
 $ push-init.sh <path/to/base/repo> <remote-repository> [organization: jphacks] [protocol: https]
 ```
 
+## [automate.sh](push-init.sh)
+
+prefix-loop.js, mkrepo.js, push-init.sh を併せてリポジトリを自動作成するようにしたスクリプト  
+若干ハードコード気味 :P
