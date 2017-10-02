@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 readonly ORGANIZATION="jphacks"
+readonly BASEREPO_PATH="~/github.com/jphacks/sample"
 
 prepare() {
 	local prefix=$1
@@ -10,7 +11,7 @@ prepare() {
 	node prefix-loop.js $prefix $limit $offset | xargs -n1 -I@ \
 		node mkrepo.js @ $ORGANIZATION
 	node prefix-loop.js $prefix $limit $offset | xargs -n1 -I@ \
-		bash push-init.sh ~/github.com/jphacks/sample @ $ORGANIZATION
+		bash push-init.sh $BASEREPO_PATH @ $ORGANIZATION
 }
 : "2017 札幌" || {
 	prepare SP_17 15 1
