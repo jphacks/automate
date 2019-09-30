@@ -2,23 +2,10 @@
 
 JPHACKS 準備用のスクリプトを保管するリポジトリ
 
-## [prefix-loop.js](./prefix-loop.js)
+## [team-and-repo.js](team-and-repo.js)
 
-`JP_YYxx` といった prefix の付いた ID 生成用 js  
-今はコマンドとして実装しているけど、require 可能にする予定
-
-```shell
-$ node prefix-loop.js [prefix: JP_] [limit: 15] [offset: 1] [zerofill: true]
-```
-
-## [mkrepo.js](mkrepo.js)
-
-その名の通りリポジトリを生成するだけの js
-これも関数として require 可能にしておきたい
-
-```shell
-$ node mkrepo.js <repository> [organization: jphacks]
-```
+[Octokit](https://octokit.github.io/rest.js) を使った GitHub の操作スクリプト
+チーム名の生成、 チームの作成、リポジトリの作成、リポジトリへの push 権限の付与を一括で実行
 
 ## [push-init.sh](push-init.sh)
 
@@ -29,8 +16,3 @@ cd とか remote の追加とか push とかはコマンドベースで書いた
 ```shell
 $ push-init.sh <path/to/base/repo> <remote-repository> [organization: jphacks] [protocol: https]
 ```
-
-## [automate.sh](push-init.sh)
-
-prefix-loop.js, mkrepo.js, push-init.sh を併せてリポジトリを自動作成するようにしたスクリプト  
-若干ハードコード気味 :P
