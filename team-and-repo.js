@@ -99,6 +99,14 @@ const genTeamNames = (prefix, limit = 15, offset = 1, zerofill = true) => {
         team_id: team.id,
         permission: 'push',
       });
+
+      // Add admin priviledge to organizers
+      // await octokit.teams.addOrUpdateRepo({
+      //   owner: TARGET_ORG,
+      //   repo: teamName,
+      //   team_id: ,
+      //   permission: 'admin',
+      // });
       console.log(`Repository for ${teamName} have successfully created: ${repo.html_url}`);
       console.log(`Rate limit remains: ${headers['x-ratelimit-remaining']}/${headers['x-ratelimit-limit']}`);
 
