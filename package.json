@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@octokit/rest": "^16.28.7"
-  }
+    "@octokit/rest": "^16.43.2",
+    "date-fns": "^2.16.1"
+  },
+  "devDependencies": {}
 }
