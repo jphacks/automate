@@ -9,7 +9,7 @@
  */
 const { Octokit } = require('@octokit/rest');
 const octokit = new Octokit({
-  auth: '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',//process.env.GITHUB_TOKEN,
+  auth: '',//process.env.GITHUB_TOKEN,
   userAgent: 'JPHACKS GitHub Automation',
 });
 const TARGET_ORG = 'jphacks';
